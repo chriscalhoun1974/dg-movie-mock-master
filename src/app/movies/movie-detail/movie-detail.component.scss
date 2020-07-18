@@ -1,0 +1,67 @@
+.detail {
+  color: rgb(48, 52, 54);
+  width: 498px;
+
+  .title {
+    font-size: 24px;
+    font-family: OpenSans-Bold;
+    font-weight: bold;
+    line-height: 18px;
+  }
+
+  .border {
+    border: 1px solid #8d989e !important;
+    margin: 7px 0px 2px 0px;
+  }
+
+  .rating {
+    border: 1px solid rgb(141, 152, 157);
+    border-radius: 4px;
+    text-align: center;
+    color: rgb(141, 152, 157);
+    font-size: 14px;
+    font-family: Courier;
+    margin-top: 5px;
+    padding: 2px 6px 2px 6px;
+  }
+
+  .runtime {
+    font-size: 14px;
+    font-family: ArialMT;
+    margin-left: 15px;
+  }
+
+  .released {
+    font-size: 14px;
+    font-family: Helvetica;
+    margin-top: 4px;
+  }
+
+  .plot {
+    padding: 12px 0px 12px 0px;
+    font-size: 16px;
+    font-family: Helvetica;
+  }
+
+  .view {
+    position: absolute;
+    right: 15px;
+    bottom: 12px;
+
+    button {
+      width: 193px;
+      height: 40px;
+      background: rgb(249, 180, 74);
+      border-radius: 4px;
+      color: rgb(255, 255, 255);
+      font-size: 16px;
+      font-family: Helvetica-Bold;
+      font-weight: bold;
+
+      &:focus {
+        outline: none;
+        box-shadow: none;
+      }
+    }
+  }
+}

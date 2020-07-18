@@ -1,0 +1,36 @@
+<div *ngIf="(movies$ | async) as movies; else loading" class="d-flex justify-content-center">
+    <div class="movies">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn"
+                        [ngClass]="{'active' : selectedFilter === filter.TwoThousandsTens}"
+                        (click)="applyFilter(filter.TwoThousandsTens)">2010's</button>
+                    <button type="button" class="btn" [ngClass]="{'active' : selectedFilter === filter.TwoThousands}"
+                        (click)="applyFilter(filter.TwoThousands)">2000's</button>
+                    <button type="button" class="btn"
+                        [ngClass]="{'active' : selectedFilter === filter.NineteenNineties}"
+                        (click)="applyFilter(filter.NineteenNineties)">1990's</button>
+                    <button type="button" class="btn"
+                        [ngClass]="{'active' : selectedFilter === filter.NineteenEighties}"
+                        (click)="applyFilter(filter.NineteenEighties)">1980's</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="list-group">
+                    <div class="list-group-item" *ngFor="let movieSearch of movies.Search | moviesFilter:min:max">
+                        <div class="poster">
+                            <img [src]="movieSearch.Poster" class="rounded" [alt]="movieSearch.Title">
+                        </div>
+                        <app-movie-detail [movie]="movieSearch.detail"></app-movie-detail>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<ng-template #loading>
+    Loading movies...
+</ng-template>

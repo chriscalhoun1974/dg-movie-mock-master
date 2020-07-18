@@ -1,0 +1,72 @@
+.movies {
+  width: 720px;
+
+  .btn-group {
+    float: right;
+    margin-right: 24px;
+    margin-bottom: 40px;
+
+    button {
+      font-family: WhitneyHTF-SemiBold;
+      font-size: 14px;
+      font-weight: 600;
+      height: 16px;
+      letter-spacing: 0px;
+      width: 92px;
+      height: 36px;
+
+      &:focus {
+        outline: none;
+        box-shadow: none;
+      }
+
+      &.btn {
+        color: rgb(97, 105, 110);
+        background: rgb(247, 248, 249);
+        border: 1px solid rgb(194, 202, 208);
+
+        &:first-child {
+          border-radius: 3px 0px 0px 3px;
+        }
+
+        &:last-child {
+          border-radius: 0px 3px 3px 0px;
+        }
+
+        &.active {
+          color: rgb(255, 255, 255);
+          background: rgb(26, 114, 176);
+        }
+      }
+    }
+  }
+
+  .list-group {
+    /***********************************
+        Uncomment for scroll bar
+    ***********************************/
+    // height: calc(100vh - 322px);
+    // overflow-y: auto;
+    padding-right: 10px;
+
+    .list-group-item {
+      width: 696px;
+      min-height: 240px;
+      background: rgb(232, 235, 238);
+      border: 2px solid rgb(48, 52, 54);
+      border-radius: 8px;
+      margin-bottom: 15px;
+      padding: 16px;
+      display: flex;
+
+      .poster {
+        width: 163px;
+
+        img {
+          width: 140px;
+          height: 208px;
+        }
+      }
+    }
+  }
+}
